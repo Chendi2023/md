@@ -1,0 +1,38 @@
+```markdown
+**Step 1**: Review API Documentation
+<!-- ステップ 1: API ドキュメントの確認 -->
+
+To get started, go to the DataCloud System API Portal in the Anypoint Exchange and review the available documentation. This documentation provides essential details for connecting to and interacting with **accounts**, **aeras**, **orders**, **surveys**, and **webAccounts** objects.
+<!-- 初めに、Anypoint Exchange の DataCloud System API ポータルにアクセスし、利用可能なドキュメントを確認してください。このドキュメントには、**accounts**、**aeras**、**orders**、**surveys**、および **webAccounts** オブジェクトとの接続や操作に必要な基本的な情報が記載されています。 -->
+
+---
+
+**Step 2**: Request API Access for Your Application
+<!-- ステップ 2: アプリケーション用 API アクセスのリクエスト -->
+
+To begin using the API, you must first register your application. At the top of the DataCloud System API Portal page, click the “Request API access” button.
+<!-- API の利用を開始するには、まずアプリケーションの登録が必要です。DataCloud System API ポータル ページの上部にある「API アクセスをリクエスト」ボタンをクリックしてください。 -->
+
+Then, either:
+<!-- 次に、以下のいずれかの方法で進めてください： -->
+
+1. Select an existing application (if you have previously requested access for other APIs),
+<!-- 1. 既存のアプリケーションを選択します（他の API のアクセスを既にリクエストしている場合） -->
+
+or
+<!-- または -->
+
+2. Register a **new application** to obtain access.
+<!-- 2. アクセスを取得するために **新しいアプリケーション** を登録します。 -->
+
+For further instructions, please refer to [How to Request Access?](https://docs.mulesoft.com/anypoint-exchange/to-request-access).
+<!-- 詳しい手順については、[アクセス リクエストの方法](https://docs.mulesoft.com/anypoint-exchange/to-request-access) をご参照ください。 -->
+
+---
+
+**Step 3**: Access Approval
+<!-- ステップ 3: アクセスの承認 -->
+
+Your request will be reviewed, and once approved, you will receive an email with access information. This email will include a link to the Developer Portal where you can retrieve your **client ID** and **client secret**. These credentials will be required for authenticating and authorizing your API calls.
+<!-- リクエストが審査され、承認されると、アクセス情報が記載されたメールが届きます。このメールには、**クライアント ID** と **クライアント シークレット** を取得できる開発者ポータルへのリンクが含まれています。これらの認証情報は、API 呼び出しの認証と認可に必要となります。 -->
+```
