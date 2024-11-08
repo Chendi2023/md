@@ -2,7 +2,6 @@
 データクラウド システム API ポータルへようこそ
 
 ## Overview
-概要
 
 The DataCloud System API provides streamlined access to core data objects within Salesforce Data Cloud. Users can leverage this API to:
 
