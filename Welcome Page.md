@@ -1,49 +1,71 @@
-# API Name
-<!-- APIの名称 -->
+```markdown
+# Welcome to the API Portal for DataCloud System API
+<!-- データクラウド システム API ポータルへようこそ -->
 
 ## Overview
 <!-- 概要 -->
-This API provides functionality to [describe key features and purpose of the API]. It enables users to interact with data in [specify systems or objects, e.g., "Salesforce Data Cloud"] through methods like GET, POST, DELETE, etc.
 
-## Key Features
-- **Function 1:** Describe the main feature (e.g., Retrieve records by ID)
-- **Function 2:** Describe another feature (e.g., Bulk insert for efficient data processing)
-- **Function 3:** Additional functionality (e.g., Streaming data to the system)
+The DataCloud System API provides streamlined access to core data objects within Salesforce Data Cloud. Users can leverage this API to:
+<!-- データクラウド システム API は、Salesforce Data Cloud 内の主要なデータオブジェクトへの効率的なアクセスを提供します。ユーザーはこの API を利用して以下の操作を行うことができます： -->
 
-## Use Cases
-<!-- ユースケース -->
-This API is ideal for [mention typical use cases, e.g., "real-time customer data synchronization" or "batch processing for analytics"]. 
+1. Retrieve data from key objects: **accounts**, **aeras**, **orders**, **surveys**, and **webAccounts**.
+<!-- 1. 主要なオブジェクトからデータを取得する：**accounts**、**aeras**、**orders**、**surveys**、**webAccounts** -->
 
-## API Endpoints
-| **Method** | **Endpoint**                 | **Description**                           |
-|------------|------------------------------|-------------------------------------------|
-| `GET`      | `/resource/{id}`             | Retrieve a resource by ID                |
-| `POST`     | `/resource`                  | Add a new resource                       |
-| `DELETE`   | `/resource/{id}`             | Delete a resource by ID                  |
-| `POST`     | `/resource/bulk`             | Bulk insert multiple resources           |
+2. Integrate and interact with data through various methods, including:
+<!-- 2. 以下の方法でデータと統合し、やり取りを行う： -->
 
-## Environments
-<!-- 環境設定 -->
-| Environment | Base URL                                   |
-|-------------|-------------------------------------------|
-| Dev         | `https://api-dev.example.com/v1`          |
-| QA          | `https://api-qa.example.com/v1`           |
-| Production  | `https://api.example.com/v1`              |
+    - Fetching records by ID
+    <!-- - ID でレコードを取得する -->
+    
+    - Streaming data into the Data Cloud with `POST` and `DELETE` methods
+    <!-- - `POST` と `DELETE` メソッドを使ってデータを Data Cloud にストリーミングする -->
+    
+    - Performing bulk data insertions for efficient data processing
+    <!-- - 効率的なデータ処理のために一括データ挿入を実行する -->
 
-## Getting Started
-### Prerequisites
-1. **Access**: Request API access through Anypoint Exchange. Refer to the [Access Guide](https://docs.mulesoft.com/anypoint-exchange/to-request-access) for details.
-2. **Authentication**: Obtain `Client ID` and `Client Secret` from your approved application in Exchange.
-
-### How to Use
-1. **Request Access**: Once granted, integrate the API with your application.
-2. **Test Your Integration**: Try basic test cases to confirm connectivity and functionality.
-
-## Additional Resources
-- [MuleSoft Documentation](https://docs.mulesoft.com/)
-- [API Design Best Practices](https://docs.mulesoft.com/general/api-best-practices)
+This portal provides a comprehensive guide to the API resources and their expected behavior, allowing you to incorporate this API seamlessly into your **Application Network**.
+<!-- このポータルは、API リソースとその期待される動作に関する包括的なガイドを提供しており、この API を **アプリケーションネットワーク** にシームレスに統合することができます。 -->
 
 ---
 
-_This API is managed on the Anypoint Platform._
-<!-- このAPIはAnypointプラットフォーム上で管理されています。 -->
+## Use Case and API Architecture
+<!-- ユースケースと API アーキテクチャ -->
+
+Below is an example of how the DataCloud System API can be utilized within a layered API architecture using MuleSoft's **3-layered API approach**: **Experience API**, **Process API**, and **System API**.
+<!-- 以下は、MuleSoft の **3 階層 API アプローチ** ( **エクスペリエンス API** 、 **プロセス API** 、 **システム API** ) を使用して、データクラウド システム API を多層 API アーキテクチャで活用する例です。 -->
+
+![MuleSoft Three-Layered API](https://anypoint.mulesoft.com/static/img/mulesoft-3-tiered-architecture.png)
+<!-- MuleSoft の 3 階層 API -->
+
+---
+
+## Functional Overview
+<!-- 機能概要 -->
+
+| **Object**     | **Methods**                           | **Description**                                                                                              |
+|----------------|--------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| accounts       | `GET by ID`, `Streaming POST`, `Streaming DELETE`, `Bulk Insert` | Retrieve and manage account records in bulk or individually.            |
+| aeras          | `GET by ID`, `Streaming POST`, `Streaming DELETE`, `Bulk Insert` | Access and manage address records, enabling address-related workflows.  |
+| orders         | `GET by ID`, `Streaming POST`, `Streaming DELETE`, `Bulk Insert` | Integrate and monitor customer orders across channels.                  |
+| surveys        | `GET by ID`, `Streaming POST`, `Streaming DELETE`, `Bulk Insert` | Handle survey data for customer feedback and analysis.                  |
+| webAccounts    | `GET by ID`, `Streaming POST`, `Streaming DELETE`, `Bulk Insert` | Manage web-based account records, such as online user profiles.         |
+
+<!--
+| **オブジェクト**  | **メソッド**                                    | **説明**                                                                                                      |
+|----------------|--------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| accounts       | `ID による GET`, `ストリーミング POST`, `ストリーミング DELETE`, `一括挿入` | アカウント レコードを一括または個別に取得および管理します。                        |
+| aeras          | `ID による GET`, `ストリーミング POST`, `ストリーミング DELETE`, `一括挿入` | アドレス レコードへのアクセスと管理を行い、アドレス関連のワークフローを有効にします。 |
+| orders         | `ID による GET`, `ストリーミング POST`, `ストリーミング DELETE`, `一括挿入` | チャネル全体で顧客注文を統合および監視します。                                    |
+| surveys        | `ID による GET`, `ストリーミング POST`, `ストリーミング DELETE`, `一括挿入` | 顧客フィードバックや分析のためにアンケート データを管理します。                       |
+| webAccounts    | `ID による GET`, `ストリーミング POST`, `ストリーミング DELETE`, `一括挿入` | オンライン ユーザー プロファイルなどのウェブ ベースのアカウント レコードを管理します。      |
+-->
+
+Refer to the **API Summary** section for further details on each resource and their behavior.
+<!-- 各リソースの詳細とその動作については、**API 概要** セクションを参照してください。 -->
+
+_This portal is hosted on the Anypoint Platform, leveraging RAML version 1.0 for API definition._
+<!-- このポータルは、API 定義に RAML バージョン 1.0 を使用して、Anypoint Platform 上でホストされています。 -->
+
+_For more information on OAS, see _[_OAS_](https://anypoint.mulesoft.com/designcenter/designer/#/exchange/a91bafe6-0a6c-487c-b253-718722cba3b1/data-cloud-integration-api-2/1.1.20)_._
+<!-- OAS についての詳細は、_[_OAS_](https://anypoint.mulesoft.com/designcenter/designer/#/exchange/a91bafe6-0a6c-487c-b253-718722cba3b1/data-cloud-integration-api-2/1.1.20)_ を参照してください。 -->
+```
