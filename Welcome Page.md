@@ -37,7 +37,7 @@ Refer to the **API Summary** section for further details on each resource and th
 
 ---
 
-This portal is hosted on the Anypoint Platform, leveraging RAML version 1.0 for API definition.
+This portal is hosted on the Anypoint Platform, leveraging OAS version 3.0 for API definition.
 Anypoint Platform上でホストされ、RAMLバージョン1.0で定義されています。
 
 For more information on OAS, see [OAS](https://anypoint.mulesoft.com/designcenter/designer/#/exchange/a91bafe6-0a6c-487c-b253-718722cba3b1/data-cloud-integration-api-2/1.1.20).
