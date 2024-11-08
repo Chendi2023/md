@@ -4,7 +4,7 @@ To get started, go to the DataCloud System API Portal in the Anypoint Exchange a
 
 **Step 2**: Request API Access for Your Application
 
-To begin using the API, you must first register your application. At the top of the DataCloud System API Portal page, click the “Request API access” button.
+To begin using the API, you must first register your application. At the top of the DataCloud System API Portal page, click the “Request access” button.
 
 Then, either:
 
