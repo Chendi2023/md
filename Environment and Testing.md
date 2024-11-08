@@ -1,37 +1,31 @@
- Welcome to the API Portal for DataCloud System API
+## Environment Details for DataCloud System API
 
- Overview
+To support integration with **DataCloud System API**, please set up and maintain your own development, test, and production environments, following the standard software development lifecycle.
 
-The DataCloud System API provides streamlined access to core data objects within Salesforce Data Cloud. Users can leverage this API to:
+| Environment Name      | Purpose                              | API Endpoint URL                                                                |
+|-----------------------|--------------------------------------|---------------------------------------------------------------------------------|
+| Development Environment | For development and unit testing    | https://datacloud-system-api-dev.cloudhub.io/XXXXXX                     |
+| Production Environment | For live data operations            | https://datacloud-system-api.cloudhub.io/XXXXXX                          |
 
-1. Retrieve data from key objects: **accounts**, **aeras**, **orders**, **surveys**, and **webAccounts**.
-2. Integrate and interact with data through various methods, including:
+------
 
-    - Fetching records by ID
-    - Streaming data into the Data Cloud with `POST` and `DELETE` methods
-    - Performing bulk data insertions for efficient data processing
+## Pre-requisites
 
-This portal provides a comprehensive guide to the API resources and their expected behavior, allowing you to incorporate this API seamlessly into your **Application Network**.
+To consume the DataCloud System API, you must request access and generate your **Client ID** and **Client Secret**. Please refer to the **How to Request Access** section on the portal.
 
- Use Case and API Architecture
+------
 
-Below is an example of how the DataCloud System API can be utilized within a layered API architecture using MuleSoft's **3-layered API approach**: **Experience API**, **Process API**, and **System API**.
+## Testing Your Integration
 
-![MuleSoft Three-Layered API](https://anypoint.mulesoft.com/static/img/mulesoft-3-tiered-architecture.png)
+Below are some example test cases to help validate your integration with the **DataCloud System API**. You are encouraged to expand upon these with test cases relevant to your specific use cases.
 
- Functional Overview
+| Test Case                    | API URL Example                                                                | Expected Outcome                          |
+|------------------------------|-------------------------------------------------------------------------------|-------------------------------------------|
+| Retrieve account by ID       | `/accounts/{customerid}`  with `GET` method                                                    | The specified account details are returned. |
+| Insert bulk account data     | `/batchaccounts`                                                              | Bulk data is inserted and response status confirms success. |
+|Delete records of accounts by list of id      | `/accounts`   with `DELETE` method                                                           | Bulk deletion is successful and response confirms deleted records. |
+| Verify order by ID           | `/orders/{orderid}`  with `GET` method                                                          | The specified order details are returned. |
+| Stream post for `aeras` object | `/aeras` with `POST`Method                                             | Streamed data is successfully posted to the `aeras` object. |
+| Delete records of surveys by list of id | `/surveys/{surveysid}` with `DELETE` method                                     | The specified survey record is successfully deleted. |
 
-| **Object**     | **Methods**                           | **Description**                                                                                              |
-|----------------|--------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| accounts       | `GET by ID`, `Streaming POST`, `Streaming DELETE`, `Bulk Insert` | Retrieve and manage account records in bulk or individually.            |
-| aeras          | `GET by ID`, `Streaming POST`, `Streaming DELETE`, `Bulk Insert` | Access and manage address records, enabling address-related workflows.  |
-| orders         | `GET by ID`, `Streaming POST`, `Streaming DELETE`, `Bulk Insert` | Integrate and monitor customer orders across channels.                  |
-| surveys        | `GET by ID`, `Streaming POST`, `Streaming DELETE`, `Bulk Insert` | Handle survey data for customer feedback and analysis.                  |
-| webAccounts    | `GET by ID`, `Streaming POST`, `Streaming DELETE`, `Bulk Insert` | Manage web-based account records, such as online user profiles.         |
-
-Refer to the **API Summary** section for further details on each resource and their behavior.
-
-_This portal is hosted on the Anypoint Platform, leveraging OAS version 3.0 for API definition._
-
-_For more information on OAS, see _[_OAS_](https://anypoint.mulesoft.com/designcenter/designer/#/exchange/a91bafe6-0a6c-487c-b253-718722cba3b1/data-cloud-integration-api-2/1.1.20)_._
-
+**Note**: Modify each test case to include values relevant to your specific data objects in the **DataCloud System API**
