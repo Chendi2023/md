@@ -1,1 +1,37 @@
+ Welcome to the API Portal for DataCloud System API
+
+ Overview
+
+The DataCloud System API provides streamlined access to core data objects within Salesforce Data Cloud. Users can leverage this API to:
+
+1. Retrieve data from key objects: **accounts**, **aeras**, **orders**, **surveys**, and **webAccounts**.
+2. Integrate and interact with data through various methods, including:
+
+    - Fetching records by ID
+    - Streaming data into the Data Cloud with `POST` and `DELETE` methods
+    - Performing bulk data insertions for efficient data processing
+
+This portal provides a comprehensive guide to the API resources and their expected behavior, allowing you to incorporate this API seamlessly into your **Application Network**.
+
+ Use Case and API Architecture
+
+Below is an example of how the DataCloud System API can be utilized within a layered API architecture using MuleSoft's **3-layered API approach**: **Experience API**, **Process API**, and **System API**.
+
+![MuleSoft Three-Layered API](https://anypoint.mulesoft.com/static/img/mulesoft-3-tiered-architecture.png)
+
+ Functional Overview
+
+| **Object**     | **Methods**                           | **Description**                                                                                              |
+|----------------|--------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| accounts       | `GET by ID`, `Streaming POST`, `Streaming DELETE`, `Bulk Insert` | Retrieve and manage account records in bulk or individually.            |
+| aeras          | `GET by ID`, `Streaming POST`, `Streaming DELETE`, `Bulk Insert` | Access and manage address records, enabling address-related workflows.  |
+| orders         | `GET by ID`, `Streaming POST`, `Streaming DELETE`, `Bulk Insert` | Integrate and monitor customer orders across channels.                  |
+| surveys        | `GET by ID`, `Streaming POST`, `Streaming DELETE`, `Bulk Insert` | Handle survey data for customer feedback and analysis.                  |
+| webAccounts    | `GET by ID`, `Streaming POST`, `Streaming DELETE`, `Bulk Insert` | Manage web-based account records, such as online user profiles.         |
+
+Refer to the **API Summary** section for further details on each resource and their behavior.
+
+_This portal is hosted on the Anypoint Platform, leveraging OAS version 3.0 for API definition._
+
+_For more information on OAS, see _[_OAS_](https://anypoint.mulesoft.com/designcenter/designer/#/exchange/a91bafe6-0a6c-487c-b253-718722cba3b1/data-cloud-integration-api-2/1.1.20)_._
 
