@@ -63,8 +63,8 @@ Below is an example of how the DataCloud System API can be utilized within a lay
 Refer to the **API Summary** section for further details on each resource and their behavior.
 <!-- 各リソースの詳細とその動作については、**API 概要** セクションを参照してください。 -->
 
-_This portal is hosted on the Anypoint Platform, leveraging RAML version 1.0 for API definition._
-<!-- このポータルは、API 定義に RAML バージョン 1.0 を使用して、Anypoint Platform 上でホストされています。 -->
+_This portal is hosted on the Anypoint Platform, leveraging OAS version 3.0 for API definition._
+<!-- このポータルは、API 定義に OAS バージョン 3.0 を使用して、Anypoint Platform 上でホストされています。 -->
 
 _For more information on OAS, see _[_OAS_](https://anypoint.mulesoft.com/designcenter/designer/#/exchange/a91bafe6-0a6c-487c-b253-718722cba3b1/data-cloud-integration-api-2/1.1.20)_._
 <!-- OAS についての詳細は、_[_OAS_](https://anypoint.mulesoft.com/designcenter/designer/#/exchange/a91bafe6-0a6c-487c-b253-718722cba3b1/data-cloud-integration-api-2/1.1.20)_ を参照してください。 -->
