@@ -1,5 +1,4 @@
 # Welcome to the API Portal for DataCloud System API
-データクラウド システム API ポータルへようこそ
 
 ## Overview
 
@@ -16,7 +15,6 @@ This portal provides a comprehensive guide to the API resources and their expect
 ---
 
 ## Use Case and API Architecture
-ユースケースと API アーキテクチャ
 
 Below is an example of how the DataCloud System API can be utilized within a layered API architecture using MuleSoft's **3-layered API approach**: **Experience API**, **Process API**, and **System API**.
 
